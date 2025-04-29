@@ -79,7 +79,7 @@ a {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 a:visited {
@@ -139,7 +139,6 @@ a.read-more {
 	padding: 5px 10px;
 	border: 1px solid var(--link);
 	color: var(--link);
-	border-radius: 5px;
 	font-size: 0.9em;
 }
 
@@ -148,7 +147,7 @@ a.conversation-on-mb:hover,
 a.reply-on-mastodon:hover,
 a.reply-by-email:hover,
 a.read-more:hover {
-	background: var(--link);
+	background: #F2F2EE;
 	color: var(--button-text);
 }
 
@@ -230,7 +229,12 @@ ul.post-list a.u-url {
 	margin-bottom: 2em;
 }
 
-blockquote, aside, .aside, .note, .alert, .blockquote {
+blockquote,
+aside,
+.aside,
+.note,
+.alert,
+.blockquote {
 	padding: 1em;
 	border-left: 4px solid;
 	border-radius: 0 5px 5px 0;
@@ -238,26 +242,40 @@ blockquote, aside, .aside, .note, .alert, .blockquote {
 	margin: 1em;
 }
 
-blockquote, .blockquote {
+blockquote,
+.blockquote {
 	background: var(--blockquote);
 	border-left: 4px solid var(--blockquote-border);
 }
 
-blockquote p:last-of-type, .blockquote p:last-of-type, aside p:last-of-type, .aside p:last-of-type, .alert p:last-of-type, .note p:last-of-type {
+blockquote p:last-of-type,
+.blockquote p:last-of-type,
+aside p:last-of-type,
+.aside p:last-of-type,
+.alert p:last-of-type,
+.note p:last-of-type {
 	margin-bottom: 0;
 }
 
-blockquote p:first-of-type, .blockquote p:first-of-type, aside p:first-of-type, .aside p:first-of-type, .alert p:first-of-type, .note p:first-of-type {
+blockquote p:first-of-type,
+.blockquote p:first-of-type,
+aside p:first-of-type,
+.aside p:first-of-type,
+.alert p:first-of-type,
+.note p:first-of-type {
 	margin-top: 0;
 }
 
-blockquote cite, aside cite, .aside cite {
+blockquote cite,
+aside cite,
+.aside cite {
 	display: block;
 	text-align: right;
 	margin-top: 1em;
 }
 
-aside, .aside {
+aside,
+.aside {
 	background: var(--aside);
 	border-left: 4px solid var(--aside-border);
 }
@@ -269,8 +287,18 @@ aside, .aside {
 }
 
 @keyframes blinkBorder {
-  0%, 100% { border-color: var(--alert-border); } /* Default border color */
-  50% { border-color: var(--alert); } /* Blink to black */
+
+	0%,
+	100% {
+		border-color: var(--alert-border);
+	}
+
+	/* Default border color */
+	50% {
+		border-color: var(--alert);
+	}
+
+	/* Blink to black */
 }
 
 .alert {
@@ -411,7 +439,9 @@ mark {
 }
 
 /* IFRAME FIX */
-iframe {max-width: 100%;}
+iframe {
+	max-width: 100%;
+}
 
 /* MAKES VIDEO EMBEDS THAT DON'T USE IFRAME RESPONSIVE. DOES NOT WORK WITH YOUTUBE. */
 video {
@@ -570,50 +600,64 @@ form p {
 
 .adaptive_photo_layout ul {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid items */
-	gap: 10px; /* Adds spacing between items */
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	/* Flexible grid items */
+	gap: 10px;
+	/* Adds spacing between items */
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	align-items: start; /* Aligns items at the top of the container */
+	align-items: start;
+	/* Aligns items at the top of the container */
 }
 
 .adaptive_photo_layout li {
-	display: block; /* Block display for better control over individual items */
+	display: block;
+	/* Block display for better control over individual items */
 	width: 100%;
-	overflow: hidden; /* Keeps images within the boundaries */
-	border-radius:5px;
+	overflow: hidden;
+	/* Keeps images within the boundaries */
+	border-radius: 5px;
 }
 
 .adaptive_photo_layout img {
-	width: 100%; /* Ensures the image scales up to the container width */
-	height: auto; /* Allows height to adjust naturally, preserving the image's aspect ratio */
-	object-fit: cover; /* Covers the area, ensures no white space around images */
+	width: 100%;
+	/* Ensures the image scales up to the container width */
+	height: auto;
+	/* Allows height to adjust naturally, preserving the image's aspect ratio */
+	object-fit: cover;
+	/* Covers the area, ensures no white space around images */
 	vertical-align: bottom;
 	border-radius: 0;
-	transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	/* Smooth transition for transform and opacity */
 }
 
 .adaptive_photo_layout img:hover {
-	transform: scale(1.05); /* Slightly enlarges the image */
-	opacity: 0.9; /* Slightly reduces the opacity */
+	transform: scale(1.05);
+	/* Slightly enlarges the image */
+	opacity: 0.9;
+	/* Slightly reduces the opacity */
 }
 
 @media (max-aspect-ratio: 1/1) {
 	.adaptive_photo_layout li {
-		height: auto; /* Auto height for more natural flow */
+		height: auto;
+		/* Auto height for more natural flow */
 	}
 }
 
 @media (max-height: 480px) {
 	.adaptive_photo_layout li {
-		height: auto; /* Consistent with masonry style, allowing natural height */
+		height: auto;
+		/* Consistent with masonry style, allowing natural height */
 	}
 }
 
 @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
 	.adaptive_photo_layout ul {
-		grid-template-columns: 100%; /* One column layout for very narrow screens */
+		grid-template-columns: 100%;
+		/* One column layout for very narrow screens */
 	}
 
 	.adaptive_photo_layout li {
