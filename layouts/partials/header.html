@@ -22,6 +22,7 @@
 			{{ if templates.Exists "partials/microhook-inline-nav-begin.html" }}
 			{{ partial "microhook-inline-nav-begin.html" . }}
 			{{ end }}
+			<li><a class="page-link Home" href="https://www.samjentsch.com">Portfolio</a></li>
 			{{ range .Site.Menus.main }}
 			{{ if .Page.Params.redirect_url }}
 			<li><a class="page-link {{ .Name }}" href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a></li>
