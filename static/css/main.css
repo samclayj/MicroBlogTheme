@@ -1,15 +1,15 @@
 /* Light mode */
 :root {
-	--text: #000000;
-	--link: #1565C0;
-	--link_visited: #1565C0;
+	--text: black;
+	--link: black;
+	--link_visited: black;
 	--accent1: #333333;
 	--accent2: #666666;
-	--background: #ffffff;
+	--background: #fffefa;
 	--code: #e3e3e3;
-	--button-text: #ffffff;
+	--button-text: black;
 	--blockquote: #fffee0;
-	--blockquote-border: #e5d600;
+	--blockquote-border: #F2F2EE;
 	--aside: #e0f7fa;
 	--aside-border: #0097a7;
 	--note: #e8f5e9;
@@ -21,34 +21,9 @@
 	--audio-link: #d32f2f;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--text: #f8f8f2;
-		--link: #8be9fd;
-		--link_visited: #8be9fd;
-		--accent1: #f8f8f2;
-		--accent2: #f8f8f2;
-		--background: #282a36;
-		--code: #44475a;
-		--button-text: #282a36;
-		--blockquote: #44475a;
-		--blockquote-border: #6272a4;
-		--aside: #6272a4;
-		--aside-border: #7797b7	;
-		--note: #3f444a;
-		--note-border: #4f545a;
-		--alert: #ff5555;
-		--alert-border: #ff6e6e;
-		--field: #44475a;
-		--mark: #FFFF99;
-		--audio-link: #ff6e6e;
-	}
-}
-
 /* Font stacks */
 :root {
-	--font_system_ui: system-ui, sans-serif;
+	--font_system_ui: 'Cutive Mono', monospace;
 	--font_transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 	--font_old_style: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
 	--font_humanist: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
@@ -104,7 +79,7 @@ a {
 }
 
 a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:visited {
