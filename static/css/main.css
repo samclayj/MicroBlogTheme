@@ -5,11 +5,11 @@
 	--link_visited: black;
 	--accent1: #333333;
 	--accent2: #666666;
-	--background: #fffefa;
+	--background: #F2F2EE;
 	--code: #e3e3e3;
 	--button-text: black;
 	--blockquote: #fffee0;
-	--blockquote-border: #F2F2EE;
+	--blockquote-border: black;
 	--aside: #e0f7fa;
 	--aside-border: #0097a7;
 	--note: #e8f5e9;
@@ -147,7 +147,7 @@ a.conversation-on-mb:hover,
 a.reply-on-mastodon:hover,
 a.reply-by-email:hover,
 a.read-more:hover {
-	background: #F2F2EE;
+	background: #fffefa;
 	color: var(--button-text);
 }
 
@@ -176,6 +176,14 @@ h3 {
 
 h2 {
 	margin-top: 0;
+}
+
+.post-preview,
+.page-content {
+	background: #fffefa;
+	padding: 20px;
+	margin-bottom: 40px;
+	border-radius: 10px
 }
 
 .post-nav {
