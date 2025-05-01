@@ -64,13 +64,18 @@ th,
 strong,
 em,
 b,
-i {
-	margin: 0 10px
-}
-
+i,
 li,
 a {
 	margin: 0 5px
+}
+
+a.site-title.p-name.u-url {
+	margin: 0px;
+}
+
+a.page-link {
+	margin: 0px;
 }
 
 header {
