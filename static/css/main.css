@@ -44,12 +44,11 @@ body {
 	max-width: 58em;
 	margin: 1em auto;
 	font-family: var(--font_system_ui);
-	font-size: 18px;
+	font-size: 8pt;
 	padding: 0 0;
 	line-height: 1.6;
 	background-color: var(--background);
 	color: var(--text);
-
 }
 
 p,
@@ -66,12 +65,12 @@ strong,
 em,
 b,
 i {
-	padding: 0 5px
+	margin: 0 10px
 }
 
 li,
 a {
-	padding: 0 2px
+	margin: 0 5px
 }
 
 header {
@@ -211,6 +210,10 @@ h2 {
 
 /* Media Queries */
 @media only screen and (min-width: 1000px) {
+
+	body {
+		font-size: 1em;
+	}
 
 	.post-preview,
 	.post {
