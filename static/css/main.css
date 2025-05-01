@@ -41,14 +41,15 @@
 }
 
 body {
-	max-width: 40em;
-	margin: 2em auto;
-	font-family: var(--font_system_ui);
-	font-size: 18px;
-	padding: 0 1em;
-	line-height: 1.6;
-	background-color: var(--background);
-	color: var(--text);
+    max-width: 58em;
+    margin: 1em auto;
+    font-family: var(--font_system_ui);
+    font-size: 18px;
+    padding: 0 1em;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text);
+
 }
 
 header {
@@ -178,11 +179,20 @@ h2 {
 	margin-top: 0;
 }
 
-.post-preview {
+
+.post-preview, .post {
     background: #fffefa;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1000px) {
+.post-preview, .post {
+    padding: 20px;
     margin-bottom: 20px;
+}
 }
 
 .post-nav {
