@@ -70,7 +70,7 @@ a {
 	margin: 0 5px
 }
 
-a.site-title.p-name.u-url {
+a.site-title.p-name.u-url, a.page-link, .post-title {
 	margin: 0px;
 }
 
